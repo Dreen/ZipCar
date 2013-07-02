@@ -8,17 +8,17 @@ function Item(name, cost, amount)
 Item.prototype.getName = function()
 {
 	return this.name;
-}
+};
 
 Item.prototype.getCost = function()
 {
 	return this.cost;
-}
+};
 
 Item.prototype.getAmount = function()
 {
 	return this.amount;
-}
+};
 
 Item.prototype.dispence = function()
 {
@@ -28,6 +28,6 @@ Item.prototype.dispence = function()
 	{
 		this.amount--;
 	}
-}
+};
 
 module.exports = Item;
