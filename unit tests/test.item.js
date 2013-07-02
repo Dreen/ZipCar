@@ -8,15 +8,15 @@ describe('Item', function()
 
 	it('constructor should copy all props into the object', function()
 	{
-		assert.equal(c.getName(), 'test');
-		assert.equal(c.getCost(), 1.25);
-		assert.equal(c.getAmount(), 10);
+		assert.equal(i.getName(), 'test');
+		assert.equal(i.getCost(), 1.25);
+		assert.equal(i.getAmount(), 10);
 	});
 
 	it('dispence an item', function()
 	{
 		i.dispence();
-		assert.equal(c.getAmount(), 9);
+		assert.equal(i.getAmount(), 9);
 	});
 
 	it('remove all items and try to remove one more - should return false', function()
@@ -31,5 +31,6 @@ describe('Item', function()
 		i.dispence();
 		i.dispence();
 		assert.ok(!i.dispence());
+		assert.equal(i.getAmount(), 0);
 	});
 });
