@@ -24,21 +24,24 @@ describe('Inventory', function()
 
 	it('remove an item from inventory - should update amount', function()
 	{
-		inv.get('A');
+		var a = inv.byName('A');
+		inv.dispense(a);
 		assert.equal(inv.byName('A').getAmount(), 9);
 	});
 
 	it('remove all items A and try to remove one more - should return false', function()
 	{
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		inv.get('A');
-		assert.ok(!inv.get('A'));
+		var a = inv.byName('A');
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		inv.dispense(a);
+		assert.ok(!inv.dispense(a));
+		assert.equal(a.getAmount(), 0);
 	});
 });

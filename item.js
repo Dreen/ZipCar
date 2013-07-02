@@ -20,14 +20,4 @@ Item.prototype.getAmount = function()
 	return this.amount;
 };
 
-Item.prototype.dispence = function()
-{
-	if (this.getAmount() == 0)
-		return false;
-	else
-	{
-		this.amount--;
-	}
-};
-
 module.exports = Item;

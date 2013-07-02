@@ -5,12 +5,7 @@ Machine	= require('../machine.js');
 describe('Machine', function()
 {
 	var nominals = [2.0, 1.0, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
-	var items = [
-		['A', 1.0],
-		['B', 0.2],
-		['C', 1.25],
-		['D', 0.75]
-	];
+	var items = [['A', 1.0],['B', 0.2],['C', 1.25],['D', 0.75]];
 	var machine = new Machine(nominals, items);
 
 	describe('initialisation -', function()

@@ -40,9 +40,8 @@ Inventory.prototype.byName = function(name)
 	return false;
 };
 
-Inventory.prototype.get = function(name)
+Inventory.prototype.dispense = function(i)
 {
-	var i = this.byName(name);
 	if (!i || i.getAmount() == 0)
 		return false;
 	else
