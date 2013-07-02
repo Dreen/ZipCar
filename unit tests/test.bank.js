@@ -62,4 +62,14 @@ describe('Bank', function()
 		bank.get(0.02);
 		assert.equal(bank.getTotal(), 38.8);
 	});
+
+	it ('spread() should distribute a larger amount over smaller nominals', function()
+	{
+		bank.spread(1.27);
+		assert.equal(bank.getTotal(), 37.53);
+		assert.equal(bank.byNominal(1.0).amount, 9);
+		assert.equal(bank.byNominal(0.2).amount, 9);
+		assert.equal(bank.byNominal(0.05).amount, 9);
+		assert.equal(bank.byNominal(0.02).amount, 9);
+	});
 });
