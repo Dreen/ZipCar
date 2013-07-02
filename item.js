@@ -1,6 +1,3 @@
-var
-;
-
 function Item()
 {
 }

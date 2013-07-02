@@ -21,15 +21,15 @@ describe('Item', function()
 
 	it('remove all items and try to remove one more - should return false', function()
 	{
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
-		i.dispence():
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
+		i.dispence();
 		assert.ok(!i.dispence());
 	});
 });
