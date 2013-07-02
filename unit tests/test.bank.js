@@ -5,31 +5,14 @@ Bank	= require('../bank.js');
 describe('Bank', function()
 {
 	var bank = new Bank([
-		{
-			nominal: 2.0,
-			amount: 10
-		},{
-			nominal: 1.0,
-			amount: 10
-		},{
-			nominal: 0.5,
-			amount: 10
-		},{
-			nominal: 0.2,
-			amount: 10
-		},{
-			nominal: 0.1,
-			amount: 10
-		},{
-			nominal: 0.05,
-			amount: 10
-		},{
-			nominal: 0.02,
-			amount: 10
-		},{
-			nominal: 0.01,
-			amount: 10
-		}
+		[2.0, 10],
+		[1.0, 10],
+		[0.5, 10],
+		[0.2, 10],
+		[0.1, 10],
+		[0.05, 10],
+		[0.02, 10],
+		[0.01, 10]
 	]);
 
 	it ('should init all the coins and count up their total', function()
@@ -39,10 +22,9 @@ describe('Bank', function()
 
 	it ('should return a one pound coin object', function()
 	{
-		assert.deepEqual(bank.byNominal(1.0), {
-			nominal: 1.0,
-			amount: 10
-		});
+		var c = bank.byNominal(1.0);
+		assert.equal(c.getNominal(), 1.0);
+		assert.equal(c.getAmount(), 10);
 	});
 
 	it ('add a bunch of coins and maintain correct total', function()

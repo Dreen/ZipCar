@@ -4,10 +4,7 @@ Coin	= require('../coin.js');
 
 describe('Coin', function()
 {
-	var c = new Coin({
-		nominal: 0.5,
-		amount: 10
-	});
+	var c = new Coin(0.5, 10);
 
 	it('constructor should copy all props into the object', function()
 	{
