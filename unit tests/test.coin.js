@@ -6,17 +6,17 @@ describe('Coin', function()
 {
 	var c = new Coin({
 		nominal: 0.5,
-		amount: 100
+		amount: 10
 	});
 
 	it('constructor should copy all props into the object', function()
 	{
 		assert.equal(c.getNominal(), 0.5);
-		assert.equal(c.getAmount(), 100);
+		assert.equal(c.getAmount(), 10);
 	});
 
 	it('getTotal() should calculate total money in this coin', function()
 	{
-		assert.equal(c.getTotal(), 50.0);
+		assert.equal(c.getTotal(), 5.0);
 	});
 });
