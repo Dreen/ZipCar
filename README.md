@@ -11,7 +11,7 @@ It is implemented without relying on Node modules (including internal) to be abl
 Dependencies:
 
  - [NodeJS](http://nodejs.org/)
- - [Mocha](http://visionmedia.github.io/mocha/)
+ - [Mocha](http://mochajs.org/)
 
 To run:
 
